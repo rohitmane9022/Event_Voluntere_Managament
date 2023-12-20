@@ -44,7 +44,7 @@ export default function EventsForm({ preData, type, submitFunction ,onClose }) {
 
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+    
         <label>Name:</label>
         <input
           type="text"
@@ -53,8 +53,8 @@ export default function EventsForm({ preData, type, submitFunction ,onClose }) {
           onChange={handleChange}
           required
         />
-      </div>
-      <div>
+      
+    
         <label>Date:</label>
         <input
           type="date"
@@ -63,8 +63,8 @@ export default function EventsForm({ preData, type, submitFunction ,onClose }) {
           onChange={handleChange}
           required
         />
-      </div>
-      <div>
+      
+    
         <label>Location:</label>
         <input
           type="text"
@@ -73,8 +73,8 @@ export default function EventsForm({ preData, type, submitFunction ,onClose }) {
           onChange={handleChange}
           required
         />
-      </div>
-      <div>
+      
+    
         <label>Description:</label>
         <textarea
           name="description"
@@ -82,8 +82,8 @@ export default function EventsForm({ preData, type, submitFunction ,onClose }) {
           onChange={handleChange}
           required
         />
-      </div>
-      <div>
+      
+    
         <label>Volunteer Roles (comma-separated):</label>
         <input
           type="text"
@@ -91,7 +91,7 @@ export default function EventsForm({ preData, type, submitFunction ,onClose }) {
           value={formData.volunteerRoles}
           onChange={handleVolunteerRolesChange}
         />
-      </div>
+      
       <button type="submit">Submit</button>
     </form>
   );

@@ -6,20 +6,23 @@ import VolunteersForm from "../../components/VolunteersForm";
 
 export default function Volunteer() {
   const { volunteers } = useSelector(state => state?.volunteers);
-  console.log(volunteers);
-  return <div>
+ 
+  return (
+  <div>
     <h3>Volunteers View</h3>
     <div className="contain">
     <VolunteersForm submitFunction={addVolunteer} type="add" />
     <ul>
       {
-        volunteers?.map(item => <li style={item.availability ? {border:"solid", borderColor: "green" }:{}} key={item._id}>
-          <NavLink to={`/volunteer/${item._id}`}>
-            <span>{item.name}</span>  ({item.availability})
+        volunteers?.map(item => 
+        <li style={item.availability ? {border:"solid", borderColor: "black" }:{}} key={item._id}>
+          <NavLink to={`/volunteer/${item._id}`} style={{listStyleType:"none",textDecoration:"none",color:"black"}}>
+            <span>{item.name}</span>
           </NavLink>
         </li>)
       }
     </ul>
     </div>
   </div>
+  )
 }

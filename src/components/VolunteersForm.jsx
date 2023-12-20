@@ -45,12 +45,12 @@ else if( type === "checkbox" ){
   }
   return (
     <form onSubmit={handleSubmit}>
-      <div>
+  
         <label>Name:</label>
         <input type="text" name="name" value={volunteerData.name} onChange={handleChange} required />
-      </div>
+    
 
-      <div>
+  
         <label>Gender:</label>
         <select name="gender" value={volunteerData.gender} onChange={handleChange}>
           <option value="">Select Gender</option>
@@ -58,31 +58,29 @@ else if( type === "checkbox" ){
           <option value="Female">Female</option>
           <option value="Other">Other</option>
         </select>
-      </div>
+    
 
-      <div>
+  
         <label>Contact:</label>
         <input type="text" name="contact" value={volunteerData.contact} onChange={handleChange} required />
-      </div>
+    
 
-      <div>
+  
         <label>Skills:</label>
        <textarea name="skills" id="" cols="20" rows="2" placeholder="seperate skills by commas" onChange={handleChange} value={volunteerData.skills.join()}></textarea>
-      </div>
+    
 
-      <div>
+      <>
         <label>Availability:</label>
         <input type="checkbox" name="availability" checked={volunteerData.availability===true?'on':''} onChange={handleChange} />
-      </div>
-
-      <div>
+        </>
+  
         <label>Areas of Interest:</label>
           <textarea onChange={handleChange} value={volunteerData.areasOfInterest.join(',')} name="areasOfInterest" id="" cols="20" rows="2" placeholder="Interests should be seperate by comma" />
-      </div>
-      <div>
+    
+  
      
       <MultipleSelectCheckmarks preData={volunteerData} handleChangeFunction={setvolunteerData} />
-</div>
       <button type="submit">Submit</button>
     </form>
   );

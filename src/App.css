@@ -21,6 +21,7 @@ header {
   justify-content: space-between;
   padding: 0.5rem 1rem;
   align-items: center;
+  margin: 10px 20px;
 }
 
 header nav {
@@ -52,7 +53,7 @@ button:hover {
 }
 
 form {
-  padding: 2rem;
+  /* padding: 2rem; */
   display: flex;
   flex-direction: column;
   flex-wrap: wrap;
@@ -76,17 +77,18 @@ svg:hover {
 
 ol,
 ul {
-  width: fit-content;
-  margin: auto;
+  
   display: flex;
   flex-wrap: wrap;
+  flex-direction: column;
   gap: 5px;
-  padding: 0 2rem;
+  /* padding: 0 2rem; */
 }
 
 li {
-  background-color: #ccc;
-  padding: 0.5rem;
+  background-color: white;
+  color: black;
+  padding: 10px 20px;
   border-radius: 5px;
   width: 100%;
   display: flex;
@@ -94,6 +96,8 @@ li {
   text-align: center;
   flex-direction: column;
   position: relative;
+  height: 30px;
+  margin: 20px auto;
 
 }
 li span:first-child{
@@ -107,13 +111,17 @@ li svg{
   top:0;
   right:0;
 }
+label{
+  font-size: 17px;
+  font-weight: 500;  
+}
 
 input,
 select, textarea {
   min-width:12ch;
   padding: 0.5rem;
   border: 2px solid;
-  background: #ddd;
+  /* background: ; */
   border-radius: 5px;
   margin:3px;
 
@@ -142,24 +150,16 @@ button:hover {
 }
 
 button {
-  background-color: #343434;
-  color: white;
+  background-color: white;
+  color: black;
   padding: 0.5rem 1rem;
   border-radius: 5px;
-  border: 2px solid #343434;
+  border: 2px solid black;
   font-weight: bold;
   margin: 3px;
 }
 
-.loader {
-  height: 25px;
-  width: 25px;
-  border-radius: 50%;
-  margin:auto;
-  border: 10px double currentColor;
-  border-top: 10px solid #aaa;
-  animation: 1s linear 0s infinite spin;
-}
+
 .detailsCard p{
   text-align: left;
   max-width: fit-content;
@@ -172,14 +172,7 @@ button {
   margin: auto;
   align-items: flex-start;
 }
-@keyframes spin {
-  to {
-    transform: rotate(360deg);
-  }
-}
-@media (min-width:670px) {
-  .contain{
-    display: flex;
-    justify-content: space-between;
-  }
+.contain{
+  display: flex;
+  justify-content: space-evenly;
 }

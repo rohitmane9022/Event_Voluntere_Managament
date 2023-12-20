@@ -14,9 +14,12 @@ export default function Events() {
     <EventsForm type="add" submitFunction={addEvent} />
     <ul>
       {
-        events?.map(item => <li key={item._id}>
-          <NavLink to={`/events/${item._id}`}>
-             {item.name}
+        events?.map(item => 
+        <li
+        style={{border:"2px solid black" }}
+         key={item._id}>
+          <NavLink to={`/events/${item._id}`} style={{listStyleType:"none",textDecoration:"none",color:"black"}}>
+          <span>{item.name}</span>
           </NavLink>
         </li>)
       }
