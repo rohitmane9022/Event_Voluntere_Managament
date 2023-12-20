@@ -12,9 +12,6 @@
   padding: 0.6rem;
 }
 
-.logo:hover {
-  cursor: crosshair;
-}
 
 header {
   display: flex;
@@ -47,10 +44,7 @@ input {
   margin: 2px;
 }
 
-button:hover {
-  opacity: 0.8;
-  cursor: pointer;
-}
+
 
 form {
   /* padding: 2rem; */
@@ -69,11 +63,6 @@ svg {
   padding: 5px;
 }
 
-svg:hover {
-  cursor: pointer;
-  background-color: #aaa;
-  border-radius: 50%;
-}
 
 ol,
 ul {
@@ -103,9 +92,7 @@ li {
 li span:first-child{
   font-weight: 800;
 }
-li:hover {
-  opacity: 0.8;
-}
+
 li svg{
   position: absolute;
   top:0;
@@ -139,10 +126,7 @@ textarea{
   flex-wrap: wrap;
   justify-content: space-evenly;
 }
-button:hover {
-  transform: scale(0.95);
-  cursor: pointer;
-}
+
 
 .secondaryBtn {
   background-color: #fff;
